@@ -1,0 +1,49 @@
+<%- include('header') %>
+<link rel="stylesheet" href="/css/mobileStyling.css" media="only screen and (max-width: 679px)">
+<link rel="stylesheet" href="/css/formMobileStyling.css" media="only screen and (max-width: 679px)">
+<link rel="stylesheet" href="/css/desktopStyling.css" media="only screen and (min-width: 680px)">
+<link rel="stylesheet" href="/css/formDesktopStyling.css" media="only screen and (min-width: 680px)">
+
+<body>
+        <div class="formPosition" >
+        <h1>Add New Site</h1>
+        <div class="siteForm">
+            <form action="/addSite" method="post">
+                <label for="siteName">Name of Site:</label><br>
+                <input type="text" id="siteName" placeholder = "Enter Name of Site" name=siteName required><br>
+                <label for="region">Region:</label><br>
+                <!-- Need to get dynamic region fill working -->
+                <select name="region" id="region"><br>
+                    <option value = "North Midlands"> North Midlands</option>
+                    <option value = "North East"> North East</option>
+                    <option value = "North West"> North West</option>
+                    <option value = "South Midlands"> South Midlands</option>
+                    <option value = "Scotland"> Scotland</option>
+                    <option value = "South East"> South East</option>
+                    <option value = "South West"> South West</option>                
+                </select><br>
+                <label for="plotName">Name of Plot:</label><br>
+                <input type="text" id="plotName" placeholder = "Enter Name of Plot" name=plotName required><br>
+                <label for="owner">Owner:</label><br>
+                <input type="text" id="owner" placeholder = "Enter Owner" name=owner required><br>
+                <label for="HA">HA (Approx.):</label><br>
+                <input type="text" id="ha" placeholder = "Enter HA" name=ha><br>
+                <label for="offerDesc">Offer Description:</label><br>
+                <input type="text" id="offerDesc" placeholder = "Enter Offer Description" name=offerDesc><br>
+                <label for="status">Status:</label><br>
+                <input type="text" id="status" value= "Site Under Investigation" name = status ><br><br>
+      
+            <input type="submit" value="Submit">
+    
+              <%if (locals.errorMessage){ %>
+                <%= errorMessage %>
+              <% } %>       
+              </form>
+          </div>
+
+    </div>
+        
+
+</body>
+
+<%- include('footer') %>

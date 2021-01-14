@@ -1,0 +1,38 @@
+body {
+    background-color: #003c53;
+    color: whitesmoke;
+    font-family: "Ariel", sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+
+.loginForm{
+    text-align: center;
+    }
+
+.center {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -75%);
+    }
+
+input[type=submit]{
+  border-radius: 25px;
+  border-top: #0098cf;
+  padding: 5px;
+  background-color: #0098cf;
+  color: whitesmoke;  
+}
+
+input[type=submit]:hover{
+  opacity: 0.85;
+}

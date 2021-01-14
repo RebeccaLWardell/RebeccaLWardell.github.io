@@ -1,0 +1,121 @@
+body {
+    background-color: #ECECEA;
+    color: #4d4d4d;
+    font-family: "Ariel", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+h1 {
+color: #003c53;
+}
+
+button.add{
+    background-color:  #006387;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    border: thin;
+  
+  }
+  
+  ul {
+    padding: 0;
+  
+  }
+  
+  ul a:link{
+    text-decoration: none;
+    color:#003c53;
+  }
+  
+  ul a:visited {
+    text-decoration: none;
+    color: #003c53;
+  }
+  
+nav{
+  display: none;
+}
+
+.topnav {
+    background-color: #003c53;
+    color: whitesmoke;
+    font-family: "Hellix", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* styling to hide the links on startup and refresh automatically (script is used on button click to show links) */
+.topnav #menuLinks {
+  display: none;
+  }
+
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  .topnav a img{
+    height: 50px;
+
+  }
+  
+
+/* styling to position burger menue it correctly */
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+
+#menuLinks a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* styling to customise top navigational bar to theme and sort colour when hovering. */ 
+#menuLinks a:hover {
+    background-color:#006387;
+  }
+
+.content {
+    flex: 1 0 auto;
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #006387;
+  color: whitesmoke;
+  text-align: center;
+}
+
+footer > div > p {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+
+
+
+  
+ 

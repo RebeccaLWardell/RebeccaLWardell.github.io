@@ -1,0 +1,41 @@
+<%- include('header') %>
+
+<link rel="stylesheet" href="/css/mobileStyling.css" media="only screen and (max-width: 679px)">
+<link rel="stylesheet" href="/css/viewMobileStyling.css" media="only screen and (max-width: 679px)">
+<link rel="stylesheet" href="/css/desktopStyling.css" media="only screen and (min-width: 680px)">
+<link rel="stylesheet" href="/css/viewdesktopStyling.css" media="only screen and (min-width: 680px)">
+
+
+<body>
+    <div class="titleRow">
+        <h1>
+            <%= title %>
+        </h1>
+        <button class="add" onclick="document.location='addsite'">+</button>
+    </div>    
+
+    <table>
+        <tr>
+          <th>Sites</th>
+          <th>Region</th>
+          <th>Site Type</th>
+        </tr>
+
+        <% for (var i = 0; i < allSites.length; i++) { %>
+            <div> 
+                <tr>
+                    <td><a href="/sitedetails?siteId=<%=allSites[i]._id%>"><%= allSites[i].sitename%></a></td>
+                    <td><%= allSites[i].region%></td>
+                    <td><%= allSites[i].offerdesc%></td>
+                  </tr>                                
+            </div>     
+        <% } %>
+      </table>
+
+</body>
+
+<%- include('footer') %>
+
+
+
+

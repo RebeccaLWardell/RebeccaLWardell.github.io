@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="/css/desktopStyling.css" media="only screen and (min-width: 680px)">
+    <link rel="stylesheet" href="/css/mobileStyling.css" media="only screen and (max-width: 679px)">
+</head>
+</html>
+  <body>
+    <div class="desktopMenu">
+    <nav>
+      <a href="./"> <img src="./images/hlmLogo.svg" alt="HLM logo image" ></a>
+      <div class= "navbar">    
+        <div id="myLinks">             
+              <a href = "./">Home</a>     
+
+              <a href = "./sites">Sites</a>    
+                      
+              <!-- only display if logged in as admin -->
+              <a href = "./users">Users</a>
+  
+              <a href = "./accounts">Finance</a>
+
+              <a href = "./reports">Reports</a>
+              
+              <div class="logoutbutton">
+                <a href = "./logout">Logout</a>    
+              </div>
+                   
+      
+        <!-- </div> -->
+    </div>
+    </nav>
+
+  </div>
+
+    <div class = "topnav">
+        <a href="./"> <img src="./images/hlmLogo.svg" alt="HLM logo image" style="width: 25vw; max-width: 60px;"></a> 
+        <%if (locals.login) {%>
+
+
+        <!-- need Jscript to allow function to work -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <img src="./images/burgerMenu.svg" alt="Menu Button" style="width: 27vw; max-width: 25px;">
+        <i class="fa fa-bars"></i>
+
+        </a>
+
+        <div id="menuLinks">             
+                <a href = "./">Home</a>
+                <a href = "./sites">Sites</a>
+            
+                <!-- only display if logged in as admin -->
+                <a href = "./users">Users</a>
+            
+                <!-- Who needs to be able to see these, everyone or accountants/directors? -->
+                <a href = "./accounts">Finance</a>
+                <a href = "./reports">Reports</a>
+                <a href = "./logout">Logout</a>        
+        </div>
+        <% } %>
+        </div>    
+        
+        </div>
+</body>
+
+
+
+<script>
+function myFunction() {
+  
+  var x = document.getElementById("menuLinks");
+  console.log(x);
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
+

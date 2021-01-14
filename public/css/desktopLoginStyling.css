@@ -1,0 +1,44 @@
+body {
+    color: #b8b8b8;
+  }
+/* relative image for mobile site pertaining to Book Now image */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    }
+
+.loginForm{
+    text-align: center;
+    }
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background-color: #003c53;
+    padding: 70px;
+    padding-left: 75px;
+    padding-right: 75px;
+    }
+
+input[type=submit]{
+    border-radius: 25px;
+    border: none;
+    padding: 5px;
+    background-color: #0098cf;
+    color: whitesmoke;  
+    }
+    
+input[type=submit]:hover{
+opacity: 0.85;
+}
+
+
+.forgotPass {
+    font-size: 12px;
+}
+
+

@@ -1,0 +1,89 @@
+body {
+  background-color: #ECECEA;
+  color: #4d4d4d;
+  font-family: "Ariel", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+h1 {
+color: #003c53;
+}
+
+
+
+
+/* Hides mobile navbar */
+.topnav {
+  display: none;
+}
+
+nav {
+background-color: #003c53;
+color: whitesmoke;
+font-family: "Hellix", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
+overflow: hidden;
+display: block;
+}
+
+.navbar {
+text-decoration: none;
+color: inherit;
+display: inline-block;
+
+}
+
+#myLinks {
+  padding-left: 300px;
+}
+#myLinks a {
+text-decoration: none;
+color: inherit;
+font-size: 18px;
+padding: 20px;
+}
+
+
+.logoutbutton {
+  padding-left: 200px;
+  display: inline-block;
+}
+img {
+margin-left: auto;
+margin-right: auto;
+width: 18%;
+vertical-align: middle;
+}
+
+button.add{
+  background-color:  #006387;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  border: thin;
+
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #006387;
+  color:whitesmoke;
+  text-align: center;
+}
+
+footer > div > p {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 0.8rem;
+}

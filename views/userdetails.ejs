@@ -1,0 +1,57 @@
+<%- include('header') %>
+<link rel="stylesheet" href="/css/mobileStyling.css" media="only screen and (max-width: 679px)">
+<link rel="stylesheet" href="/css/formMobileStyling.css" media="only screen and (max-width: 679px)">
+<link rel="stylesheet" href="/css/desktopStyling.css" media="only screen and (min-width: 680px)">
+<link rel="stylesheet" href="/css/formDesktopStyling.css" media="only screen and (min-width: 680px)">
+
+<body>
+  <div class="formPosition">
+    <a href = "./users">&#10094;</a>
+    <h1>
+      <%= title %>
+     </h1>
+        <div class="userForm">
+            <form action="/editUser" method="post">
+            <label for="username">UserName:</label><br>
+            <input type="text" id="username" placeholder="User Name" name="username" value = <%=username %> disabled><br>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" placeholder="First Name" name="fname" value = <%=firstname %> required><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" placeholder="Last Name" name="lname" value = <%=lastname %> required><br>
+            <label for="email">E-Mail:</label><br>
+            <input type="text" id="email" placeholder="E-Mail" name="email" value = <%=email %> required><br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" placeholder="Password" name="pwd" value = <%=password %> required><br>
+            <label for="pwd">Confirm Password:</label><br>
+            <input type="password" id="pwd" placeholder="Confirm Password" name="pwdConf" value = <%=password %> required><br><br>
+    
+    
+            <label for="role"> User Role:</label><br>
+            <select name="role" id="role">
+              <option selected="selected">
+                <%= role %>
+              </option>
+              <option value="Admin">Administrator</option>
+              <option value="Director">Director</option>
+              <option value="Accountant">Accountant</option>
+              <option value="HLM User">HLM User</option>
+            </select>  
+            <br><br>
+            
+            
+    
+            <input type="submit" value="Save">
+            
+            <%if (locals.errorMessage){ %>
+                <%= errorMessage %>
+              <% } %>
+              
+              </form>
+          </div>
+
+  </div>
+ 
+
+</body>
+
+<%- include('footer') %>

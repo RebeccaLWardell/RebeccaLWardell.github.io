@@ -1,0 +1,29 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0">
+  <link rel="stylesheet" href="/css/mobileStyling.css" media="only screen and (max-width: 679px)">
+  <link rel="stylesheet" href="/css/mobileLoginStyling.css" media="only screen and (max-width: 679px)">
+  <link rel="stylesheet" href="/css/desktopStyling.css" media="only screen and (min-width: 680px)">
+  <link rel="stylesheet" href="../css/desktopLoginStyling.css" media="only screen and (min-width: 680px)">
+</head>
+
+<body>
+  <div class="center">
+    <img src="./images/hlmLogo.svg" alt="HLM logo image">
+    <br>
+    <div class="loginForm">
+    <form action="/login" method="post">
+        <label for="username">UserName:</label><br>
+        <input type="text" id="username" placeholder="UserName" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="pwd" placeholder="Password" name="pwd" required><br><br>
+        <input type="submit" value="Log In"><br>
+        <br><br>
+        <!-- add modal popup when clicked -->
+        <div class="forgotPass">
+          Forgot Your Password?
+        <%if (locals.errorMessage){ %>
+            <%= errorMessage %>
+          <% } %>
+        </div>
+</body>
